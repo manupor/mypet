@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import bcrypt from 'bcryptjs';
 import db from '../database/init';
 import { authenticateStaff, AuthRequest } from '../middleware/auth';
+import { sendWelcomeEmail } from '../services/emailService';
 
 const router = Router();
 
@@ -151,6 +152,12 @@ router.post('/',
         JOIN veterinary_clients vc ON u.id = vc.user_id
         WHERE u.id = ? AND vc.veterinary_id = ?
       `).get(user.id, veterinaryId);
+
+      // Send welcome email
+      const veterinaryName = req.veterinary.name || 'tu veterinaria';
+      sendWelcomeEmail(email, name, veterinaryName).catch(err => {
+        console.error('Welcome email error:', err);
+      });
 
       res.status(201).json({ success: true, data: client });
     } catch (error) {
