@@ -102,8 +102,8 @@ router.get('/google',
 
 router.get('/google/callback',
   passport.authenticate('google', { session: false, failureRedirect: '/login' }),
-  (req: Request, res: Response) => {
-    const user = req.user as any;
+  (req: any, res: Response) => {
+    const user = req.user;
     const token = generateUserToken(user.id);
     const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
     res.redirect(`${clientUrl}/auth/callback?token=${token}`);
@@ -117,8 +117,8 @@ router.get('/facebook',
 
 router.get('/facebook/callback',
   passport.authenticate('facebook', { session: false, failureRedirect: '/login' }),
-  (req: Request, res: Response) => {
-    const user = req.user as any;
+  (req: any, res: Response) => {
+    const user = req.user;
     const token = generateUserToken(user.id);
     const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
     res.redirect(`${clientUrl}/auth/callback?token=${token}`);

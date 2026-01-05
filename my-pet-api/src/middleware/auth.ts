@@ -6,6 +6,8 @@ export interface AuthRequest extends Request {
   user?: any;
   staff?: any;
   veterinary?: any;
+  file?: any;
+  files?: any;
 }
 
 export function authenticateUser(req: AuthRequest, res: Response, next: NextFunction) {
