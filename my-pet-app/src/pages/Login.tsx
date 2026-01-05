@@ -40,7 +40,8 @@ export default function Login() {
   };
 
   const handleSocialLogin = (provider: 'google' | 'facebook') => {
-    window.location.href = `/api/auth/${provider}`;
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://mypet-m8j9.onrender.com';
+    window.location.href = `${apiUrl}/api/auth/${provider}`;
   };
 
   return (
