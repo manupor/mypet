@@ -27,6 +27,12 @@ import reportRoutes from './routes/reports';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Health check - MUST be before any middleware
+// This ensures instant 200 OK response for platform health verification
+app.get('/health', (_req, res) => {
+  res.status(200).send('ok');
+});
+
 // Middleware
 app.use(helmet());
 app.use(cors({
