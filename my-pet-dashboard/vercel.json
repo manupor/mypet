@@ -9,7 +9,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/admin/index.html"
+      "destination": "/index.html"
     }
   ]
 }
