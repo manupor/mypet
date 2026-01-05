@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Clients from './pages/Clients';
+import ClientNew from './pages/ClientNew';
 import ClientDetail from './pages/ClientDetail';
 import Pets from './pages/Pets';
 import PetDetail from './pages/PetDetail';
@@ -32,6 +33,7 @@ export default function App() {
       <Route path="/" element={<PrivateRoute><Layout /></PrivateRoute>}>
         <Route index element={<Dashboard />} />
         <Route path="clients" element={<Clients />} />
+        <Route path="clients/new" element={<ClientNew />} />
         <Route path="clients/:clientId" element={<ClientDetail />} />
         <Route path="pets" element={<Pets />} />
         <Route path="pets/:petId" element={<PetDetail />} />
