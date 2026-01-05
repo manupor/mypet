@@ -1,0 +1,6 @@
+[build]
+builder = "nixpacks"
+watchPatterns = ["my-pet-api/**"]
+
+[deploy]
+startCommand = "cd my-pet-api && npm start"
