@@ -40,8 +40,8 @@ export default function Login() {
   };
 
   const handleSocialLogin = (provider: 'google' | 'facebook') => {
-    const apiUrl = import.meta.env.VITE_API_URL || 'https://mypet-m8j9.onrender.com';
-    window.location.href = `${apiUrl}/api/auth/${provider}`;
+    // OAuth must go directly to backend, not through Vercel rewrite
+    window.location.href = `https://mypet-m8j9.onrender.com/api/auth/${provider}`;
   };
 
   return (
