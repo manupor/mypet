@@ -8,6 +8,14 @@
       "destination": "https://mypet-m8j9.onrender.com/api/:path*"
     },
     {
+      "source": "/admin/:path*",
+      "destination": "https://my-pet-dashboard.vercel.app/:path*"
+    },
+    {
+      "source": "/admin",
+      "destination": "https://my-pet-dashboard.vercel.app"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
