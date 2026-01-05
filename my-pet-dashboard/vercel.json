@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://api.mypet.guru/api/:path*"
+      "destination": "https://mypet-m8j9.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",
