@@ -11,6 +11,7 @@
     "db:seed": "tsx src/database/seed.ts"
   },
   "dependencies": {
+    "typescript": "^5.3.3",
     "express": "^4.18.2",
     "cors": "^2.8.5",
     "helmet": "^7.1.0",
@@ -48,8 +49,7 @@
     "@types/uuid": "^9.0.7",
     "@types/nodemailer": "^6.4.14",
     "@types/node": "^20.10.0",
-    "tsx": "^4.7.0",
-    "typescript": "^5.3.3"
+    "tsx": "^4.7.0"
   },
   "engines": {
     "node": ">=18.0.0"
