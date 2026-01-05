@@ -5,6 +5,7 @@ import { servicesApi, veterinaryApi } from '../lib/api';
 import { formatCurrency, formatShortDate } from '../lib/utils';
 
 export default function Services() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [showModal, setShowModal] = useState(false);
 
   const { data: services, isLoading } = useQuery({

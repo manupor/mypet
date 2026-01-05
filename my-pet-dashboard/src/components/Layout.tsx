@@ -1,7 +1,7 @@
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { 
   LayoutDashboard, Users, PawPrint, Syringe, Scissors, 
-  Gift, Settings, LogOut, Menu, X 
+  Gift, Settings, LogOut, Menu 
 } from 'lucide-react';
 import { useState } from 'react';
 import { useAuthStore } from '../store/authStore';
