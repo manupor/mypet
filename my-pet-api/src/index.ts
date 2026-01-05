@@ -73,7 +73,7 @@ app.use(errorHandler);
 // Initialize
 async function start() {
   try {
-    initializeDatabase();
+    await initializeDatabase();
     console.log('✅ Database initialized');
     
     startVaccineReminders();

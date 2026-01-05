@@ -19,7 +19,7 @@
     "helmet": "^7.1.0",
     "morgan": "^1.10.0",
     "dotenv": "^16.3.1",
-    "better-sqlite3": "^9.2.2",
+    "@libsql/client": "^0.4.3",
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2",
     "passport": "^0.7.0",
@@ -36,7 +36,8 @@
     "date-fns": "^2.30.0"
   },
   "devDependencies": {
-    "tsx": "^4.7.0"
+    "tsx": "^4.7.0",
+    "better-sqlite3": "^9.2.2"
   },
   "engines": {
     "node": "20.x"
