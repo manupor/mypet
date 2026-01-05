@@ -35,14 +35,12 @@ export default function Register() {
     try {
       const { data } = await authApi.register({
         veterinaryName: formData.veterinaryName,
-        email: formData.email,
+        email: formData.adminEmail, // Backend uses same email for vet and admin
+        password: formData.adminPassword,
         phone: formData.phone,
         address: formData.address,
         city: formData.city,
         adminName: formData.adminName,
-        adminEmail: formData.adminEmail,
-        adminPassword: formData.adminPassword,
-        licenseNumber: formData.licenseNumber,
       });
       
       if (data.success) {
