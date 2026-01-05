@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ["nodejs_18"]
+nixPkgs = ["nodejs_18", "python3", "gcc", "gnumake"]
 
 [phases.install]
-cmds = ["npm install"]
+cmds = ["npm ci --include=dev || npm install --include=dev"]
 
 [phases.build]
 cmds = ["npm run build"]
